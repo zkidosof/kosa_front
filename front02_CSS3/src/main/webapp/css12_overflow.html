@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Insert title here</title>
+<style type="text/css">
+#parent {
+	border: 1px solid black;
+	padding: 10px;
+	
+}
+/*
+해결책
+1.부모의요소의 범위를 크게 잡는다/
+2.overFlow 속성값을 hidden으로 잡느다.
+(자식 요소가 아닌 부모 요소에서 진행해야 한다.)
+  */
+ #child{
+  border: 1px solid purple;
+  float: left;
+	overflow: hidden; 
+ }
+ 
+ #article{
+  border: 1px solid green;
+ margin-top:10px; 
+ float: right;
+ }
+</style>
+</head>
+<body>
+<div id="parent">
+	<div id="child">
+			KOSA MSA3차 과정
+	</div>	
+</div>
+<div id="article">
+	2025-06-11 Today FrontUI CSS Schedule
+</div>
+</body>
+</html>

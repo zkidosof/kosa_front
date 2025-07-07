@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FlexBox Example</title>
+<style type="text/css"> 
+
+	body{
+.playLists {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+h2{
+	text-align: center;
+	font-family: fantasy;
+}
+.playLists{
+	display: flex;
+  justify-content: center;
+  	gap:20px;
+  	margin-top: 20px;
+}
+
+.playlist {
+
+   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 200px;         /* 👉 카드 너비 고정! */
+  box-sizing: border-box;
+  text-align: center;   /* 텍스트 가운데 정렬 */
+}
+
+.playlist-thumb {
+  width: 100%;         /* 부모인 .playlist 너비에 맞춤 */
+  height: 120px;
+  object-fit: cover;
+  border-radius:15%;
+}
+
+
+.playlist-title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 10px;
+  font-family: inherit;
+  
+  
+}
+
+.playlist-artist {
+  color: gray;
+  font-size: 14px;
+  font-family: sans-serif;
+  
+}
+</style>
+
+</head>
+<body>
+<section>
+<h2 class="section-title">이달의 플레이리스트 </h2>
+<div class="playLists">
+	<div class="playlist">
+		<img class="playlist-thumb" src="./img/p1.jpg">
+		<div class="playlist-title">
+			 	몰디브에서
+		</div>
+		
+		<div class="playlist-artist">
+				아이유
+		
+		</div>
+	</div>
+	<div class="playlist">
+		<img class="playlist-thumb" src="./img/p2.jpg">
+		<div class="playlist-title">
+			 에메랄드빛 고향
+		</div>
+		
+		<div class="playlist-artist">
+				박보검
+		
+		</div>
+	</div>
+
+	<div class="playlist">
+		<img class="playlist-thumb" src="./img/p3.jpg">
+		<div class="playlist-title">
+			 	힐링! ! 그곳에 가자
+		
+		</div>
+		
+		<div class="playlist-artist">
+				손흥민
+		</div>
+	</div>
+	<div class="playlist">
+		<img class="playlist-thumb" src="./img/p4.jpg">
+		<div class="playlist-title">
+			 	여행을 떠나요!
+		
+		</div>
+		
+		<div class="playlist-artist">
+				안세영
+		</div>
+	</div>
+
+</div>
+
+</section>
+
+</body>
+</html>

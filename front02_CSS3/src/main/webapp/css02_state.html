@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Insert title here</title>
+<style type="text/css">
+/* class 속성갑ㅅ이 Accent인 부분을 선택자로 지정....글자색을 crimson */
+
+	.accent {
+		color: yellow;
+}
+
+
+/*class 속성값이 larger인 부분을 선택자로 지정 .. 글자크기를 20px  */
+	.larger{
+		font-size: 20px;
+	}
+	
+	#para{
+		border: 1px solid navy;/* 실선으로 공간 만들떄  */
+	}
+</style>
+<script type="text/javascript">  
+	function push() {
+		alert("버튼이 클릭되었습니다.~~~!");
+	}
+
+
+</script>
+</head>
+<body>
+<h2>State Attribute</h2>
+<form action="A">
+	<h3 id="box">Enabled</h3>
+	<input type="text" name="name" size=5/>
+	
+	<h3>Disabled</h3>
+	<input type="text" disabled="disabled">
+	
+	<h3>Readonly</h3>
+	<input type="text" name="title" value="KOSTA" readonly="readonly">
+	
+	<h3>Required</h3>
+	<input type="text"   name="number"  required="required">
+	<input type="submit" value="SEND">
+	
+	<input type="button" value="Button" onclick="push()">	
+	<!-- 버튼 태그로 버튼을 만들면 내부적으로 Submit 이벤트가 기본으로 작동한다. -->
+	<button >Button2</button> <!-- 버튼은 2가지 타입으로 만들수 있다 . input타임과 button 타입으로 만들수 있음 -->
+	
+</form>
+<hr>
+<h1 class = "accent">This heading will not be affected</h1>
+<p class = "accent">This paragraph will be red and center-aligned.</p>
+<p class = "accent">This paragraph will be red, center-aligned, and in a large font-size.</p> 
+<p class = "accent" id="para">This paragraph will be red and center-aligned.</p>
+<p class = "accent larger">An inline style may be used to apply a unique style for a single element..</p> <!-- 공통적으로 사용할때 클래스로 속성값을 줌 -->
+</body>
+</html>
+
+
+
+
