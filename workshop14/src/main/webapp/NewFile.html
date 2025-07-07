@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Oracle Employee Job 점유율</title>
+  <style type="text/css">
+
+  
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div  style="width: 500px; margin: 50px auto;">
+    <canvas id="jobPieChart"></canvas>
+  </div>
+
+  <script type="text/javascript">
+ 
+    
+      const ctx = document.getElementById('jobPieChart').getContext('2d');
+
+      const config = {
+        type: 'pie',
+        data: {
+          labels: ['Analyst', 'Manager', 'Engineer', 'SalesMan', 'Clerk'],
+          datasets: [{
+            label: '직무 점유 수',
+            data: [350, 1000, 2800, 3560, 860],
+            backgroundColor: [
+              '#FF6384', // Analyst
+              '#36A2EB', // Manager
+              '#FFCE56', // Engineer
+              '#4BC0C0', // SalesMan
+              '#9966FF'  // Clerk
+            ],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            title: {
+              display: true,
+              text: 'Oracle Employee Job 점유율'
+            },
+            legend: {
+              position: 'right'
+            }
+          }
+        }
+      };
+
+      new Chart(ctx, config);
+  
+  </script>
+</body>
+</html>
