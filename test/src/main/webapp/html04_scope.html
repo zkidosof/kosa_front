@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Scope Tag :: div(blocking tag) | span(inline tag)</title>
+</head>
+<body>
+	<h2>영역을 지정하는 태그 :: dibv | span</h2>
+	<hr>
+	<div>div영역1</div>
+	<div>div영역2</div>
+	<!-- blocking tag라 한줄 뛰어서 나옴 -->
+	<hr>
+	<span>span 영역 1</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+	<span>span 영역 2</span>
+	<!-- inline tag라 줄 바꿈이 안됨 <br>태그 써줘야함  -->
+	<hr>
+	<!-- html은 space bar 혹은 enter키가 적용되지 않는다. 거리를 두고 싶으면 &nbsp; ->이걸 써야함 저게 공백하나 -->
+	span scope 1 span scope2
+	<hr>
+	<!-- 원하는
+ 공백만큼 화면의 뿌려진 공백만큼 띄어주길 원할때  밑에 두는 것도 같음 <pre> 태그를 그대로 감싸면 된다. -->
+	<pre>
+span scope 1   span scope 2     span scope 3
+</pre>
+
+	<pre>
+<h2>이미지 지정하기</h2>
+<img alt="인사이드아웃2" src="image/inside.jpg" width="30%">
+<img alt="인사이드아웃2" src="image/inside.jpg">
+<!--inline tag임 이미지는  -->
+
+</pre>
+</body>
+</html>

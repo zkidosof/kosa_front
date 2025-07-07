@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Toggle :: 껐다 | 켰다</title>
+</head>
+<body>
+<h2>What is JavaScript?</h2>
+<p>It can update and change both HTML and CSS. </p>
+<p>The example below "finds" an HTML element (with id="demo"), and changes the element content (innerHTML) to "Hello JavaScript":</p>
+
+<!-- 하나의 버튼으로 토글 -->
+<button onclick="toggleLight()">Turn on the light</button><br><br>
+
+<!-- 전등 이미지에 id 추가 -->
+<img id="light" style="width: 150px"
+     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkhVXo0PStCaz-E5mudcAtsDhV53vPXqpUFQ&usqp=CAU">
+
+<script type="text/javascript">
+
+/*   let isOn = false;
+
+  function toggleLight() {
+    let img = document.getElementById("light");
+    let btn = document.querySelector("button");
+
+    if (isOn) {
+      img.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkhVXo0PStCaz-E5mudcAtsDhV53vPXqpUFQ&usqp=CAU"; // 꺼진 전등
+      btn.innerText = "Turn on the light";
+    } else {
+      img.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBjIqomV_U0yzzlg3NlB5qtbYCJQRj3AulUA&usqp=CAU"; // 켜진 전등
+      btn.innerText = "Turn off the light";
+    }
+
+    isOn = !isOn;} */
+    document.querySelector('#turnOn').onclick = on;
+    document.querySelector('#turnOff').onclick = off;
+
+    function on() {
+      let myImg = document.querySelector("img");
+      myImg.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBjIqomV_U0yzzlg3NlB5qtbYCJQRj3AulUA&usqp=CAU";
+    }
+
+    function off() {
+      let myImg = document.querySelector("img");
+      myImg.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkhVXo0PStCaz-E5mudcAtsDhV53vPXqpUFQ&usqp=CAU";
+    }
+  
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+ .edit{display: none;}
+</style>
+<script type="text/javascript">
+	function push() {
+		document.querySelector(".edit").setAttribute('style','display:block');
+
+		document.getElementById("today").innerHTML = "Hello James~~";
+		document.getElementById("today").style.color='blue';
+
+		document.getElementById("edu").innerHTML = "ChartJS";
+		document.getElementById("edu").style.color='blue';
+		//form에 값을 입력하거나 입력된 값을 받아올때....value
+		document.getElementById("name").value="James";
+	}
+</script>
+</head>
+<body>
+	<h2 id="today">오늘은 금요일입니다.</h2>
+	<h2 id="edu">KOSA 금요일 자바스크립트 수업</h2>
+	<HR>
+	<button onclick="push()">Input Name</button>
+	<span class="edit">NAME <input type="text" name="name" id="name"></span>
+</body>
+</html>

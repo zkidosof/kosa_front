@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function changeLine() {
+	  // 1. select 폼 받아오기
+	  let subway = document.getElementById("subway");
+
+	  // 2. 선택된 값 가져오기
+	  let select = subway.value;
+
+	  // 3. 조건 분기
+	  if (select === "=============") {
+	    alert("출퇴근 시 사용하는 노선을 확인하세요.");
+	    document.getElementById("result").innerHTML = ""; // 선택 안 했을 경우 초기화
+	  } else {
+	    // alert는 주석처리 가능 (2번 요구사항)
+	    // alert("당신은 출퇴근 시 " + select + "호선을 이용합니다.");
+
+	    document.getElementById("result").innerHTML =
+	      `<span style="color:blue;">선택한 노선: ${select}호선</span>`;
+	  }
+	}
+
+
+</script>
+</head>
+<body>
+<h2>Select Form</h2>
+<form action="#">
+<select id = "subway" onchange="changeLine()" > 
+<option value = "=============">
+========지하철 호선 ===========</option>
+<option value = "1">
+========지하철 1호선 ===========</option>
+<option value = "2">
+========지하철 2호선 ===========</option>
+<option value = "3">
+========지하철 3호선 ===========</option>
+<option value = "4">
+========지하철 4호선 ===========</option>
+<option value = "5">
+========지하철 5호선 ===========</option>
+</select>
+
+</form>
+<div id=result>
+
+
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

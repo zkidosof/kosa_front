@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>여러 값을 선택하는 폼 :: checkBox, Select</title>
+<script>
+function choiceMenu(){
+	//checkBox 폼까지..
+	let menu = document.frm.menu;
+	// alert(menu.length);
+	
+	//내가 선택한 메뉴를 alert창으로 출력
+	/* for(let i = 0; i<menu.length; i++){
+		// 내가 선택한 값만 받아오는 코드 추가하기
+		if(menu[i].checked){            //기억하기 -선택한 메뉴라면
+			alert(menu[i].value);
+		}
+	} */
+	
+	//2 . alert창 한번만 뜨고 선택 한 메뉴가 한창에 다 나오도록
+/* 	let str ="";
+	for (let i = 0; i < menu.length; i++) {
+		  if (menu[i].checked) {
+		    str += menu[i].value + " ";
+		  }
+		}alert("당신이 선택한 메뉴는 "+str+"입니다");
+} */
+
+ //3. alert창 한번만 뜨고 선택하 메뉴가 한창에 다 나오도록 만약에 메뉴가 
+ // 만약에 메뉴를 하나도 선택하지 않았다면 : 하나 이상의 메뉴는 꼭 선택 바랍니다.
+ 	
+ 	/* let str ="";
+ 	let checkedCount = 0;
+ 	
+ 	
+	for (let i = 0; i < menu.length; i++) {
+		  if (menu[i].checked) {
+		    str += menu[i].value + " ";
+		    checkedCount ++;
+		  }
+		}
+ 	if(checkedCount> 0){
+ 		alert("선택한 메뉴는 " + str);
+ 	}else{
+ 		alert("하나 이상의 메뉴를 골라주세요");
+ 	}*/
+ 	
+ 	let str ="";
+ 	
+	for (let i = 0; i < menu.length; i++) {
+		  if (menu[i].checked) {
+		    str += menu[i].value + " "
+		    menu[i].checked = false;
+		   
+		  }
+		}
+ 	if(str==""){
+ 		alert( "하나 이상의 메뉴를 골라주세요");
+ 	}else{
+ 		alert("선택한 메뉴는 " + str);
+ 	}
+ 	
+ 	
+ 	}
+</script>
+</head>
+<body>
+<h2> CheckBox Form...</h2>
+<form action="#" name="frm">
+<strong><h3>내일 점심 메뉴를 모두 선택하세요.</h3></strong>
+	<input type="checkbox" name="menu" value="김치찌개">김치찌개<br>
+	<input type="checkbox" name="menu" value="왕돈까스">왕돈까스<br>
+	<input type="checkbox" name="menu" value="카레라이스">인도카레<br>
+	<input type="checkbox" name="menu" value="비빔밥">비빔밥<br><br>
+	<input type="button" value="메뉴선택" onclick="choiceMenu()">
+</form>
+</body>
+</html>

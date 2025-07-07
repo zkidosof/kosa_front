@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JS Event : Onclick</title>
+
+</head>
+<body>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    let btn = document.querySelector('button');
+    let content = document.querySelector('#content');
+
+    btn.addEventListener('click', () => {
+      content.innerHTML = "<h3 style='color: crimson;'>Hello JavaScript</h3>";
+    });
+  });
+</script>
+
+</body>
+</html>

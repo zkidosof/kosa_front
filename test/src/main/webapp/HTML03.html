@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FormTege</title>
+<style type="text/css">
+ h2{
+ 	text-align: center;
+ 	color: navy;
+ 	font-size: 40px;
+ }
+form{
+	width:600px;
+	margin: 0 auto;
+
+	
+}
+legend {
+	text-align: center;
+ 	color: navy;
+ 	font-size: 20px;
+ 	
+ 	
+}
+
+fieldset {
+	padding: 50px;
+}
+
+</style>
+
+</head>
+<body>
+<h2>HTML Form Tag.....</h2>
+<form action="#">
+<fieldset>
+	<legend>Employee Information FormData</legend>
+		ID:<input type ="text" name="userId" value="psw" readonly="readonly"><br>
+		PASS:<input type ="password" name="userPass"><br>
+		Gender:<input type="radio" name ="gender" value = "Female">F
+				<input type="radio" name ="gender" value = "Male">M
+				<br><br>
+		ToDay:<input type="date" name= "date" > <br> <br>
+		Number: <input type="number" name="number"><br>
+		Guest memo:  <textarea rows="5" cols="50">
+		intro memo....
+		</textarea> <!-- input으로 시작안함  --><br><br>
+		
+		  <!--  
+		  submit 버튼 역활은 form에 입력된 모든 값을 가지고 전송
+		  action에 연결된 서버상의 프로그램으로 1)을 전달
+		  --> 
+		  
+		   -->
+		<input type="submit" value ="dataSend">
+		</fieldset>
+		</form>
+</body>
+</html>

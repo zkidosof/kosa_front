@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>폼값 핸들링</title>
+  <script type="text/javascript">
+    // 닉네임 보기 함수
+    function showNick() {
+      let nick = document.frm.nick.value;  // 폼 이름으로 접근
+      alert(nick);
+      document.getElementById("nick").value = "";
+      document.getElementById("hobby").focus();
+    }
+
+    // 취미 보기 함수
+    function showHobby() {
+      let hobby = document.frm.hobby.value;
+      alert(hobby);
+    }
+  </script>
+</head>
+<body>
+  <h2>Form Event Handling</h2>
+
+  <form name="frm" action="">
+    닉네임: <input type="text" name="nick" id="nick"><br>
+    <input type="button" value="닉네임보기" onclick="showNick()"><br><br>
+
+    취미: <input type="text" name="hobby" id="hobby"><br>
+    <input type="button" value="취미보기" onclick="showHobby()">
+  </form>
+</body>
+</html>

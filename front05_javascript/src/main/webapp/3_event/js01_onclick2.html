@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JS Event : Onclick</title>
+<script type="text/javascript">
+	function push() {
+		// 1. content영역을 받아와서 (querySelector)
+		let content = document.querySelector("#content");
+		// 2. 1번의 영역이 Hello Javascript 내용으로 변경되도록 한다.
+		// 이때 글자색은 crimson으로 한다.
+		content.innerHTML = "<h3><font color='crimson'>Hello Javascript</font></h3>";
+	}
+</script>
+</head>
+<body>
+	<h1>JavaScript란?</h1>
+	<p id="content">JavaScript is the world's most popular programming language.</p>
+	<button onclick="push()">CLICK</button>
+</body>
+</html>

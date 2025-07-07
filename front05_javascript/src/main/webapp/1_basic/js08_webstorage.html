@@ -1,0 +1,75 @@
+<!--  
+webstorage 
+1.SessionStorage
+
+2.localStorage
+
+둘중 로컬이 가장 강력함  세션은 창닫으면 정보가 날라감 
+
+
+브라우저에 저장하는 저장소를  webstroage 라고 한다.
+ 
+localStroage. 0 하고 밑에 꺼 써야함
+저장: setItem(key, value) | 읽기: getItem(key) |
+
+ 삭제: removeItem(key) | 전체삭제: clear() | 키확인: key(index)
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+function saveBtn() {
+	  localStorage.setItem("key1", "안녕");
+	  localStorage.setItem("key2", "hello");
+	  localStorage.setItem("key3", "Bonjour");
+	  alert("저장 완료!");
+	}
+
+	function delBtn() {
+	  localStorage.removeItem("key2"); // 예: key2만 삭제
+	  alert("key2 삭제 완료!");
+	}
+
+	function delAllBtn() {
+	  localStorage.clear(); // 전체 삭제
+	  alert("모두 삭제 완료!");
+	}
+
+	function showBtn() {
+	  const k1 = localStorage.getItem("key1");
+	  const k2 = localStorage.getItem("key2");
+	  const k3 = localStorage.getItem("key3");
+
+	  let message = `
+	    key1: ${k1 ?? '없음'}
+	    key2: ${k2 ?? '없음'}
+	    key3: ${k3 ?? '없음'}
+	  `;
+
+	  alert(message);
+	}
+</script>
+</head>
+<body>
+<button id='saveBtn' onclick="saveBtn()">
+저장</button>
+<button id='delBtn' onclick="delBtn()">
+삭제</button>
+<button id='delAllBtn' onclick="delAllBtn()">
+모두삭제</button>
+<button id='showBtn' onclick="showBtn()">
+조회</button>
+
+</body>
+</html>

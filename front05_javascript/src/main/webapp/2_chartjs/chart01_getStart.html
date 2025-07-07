@@ -1,0 +1,48 @@
+<!-- chartjs는 chart를 만드는 자바스크립트 라이브러리 이다. 라이브러리를 연결해야함
+라이브러리 연결
+1. 압축파일을 우리 프로젝트에 저장
+2. 라이브러리가 들어있는 사이트주소를 바로 연결 => 요 방법을 CDN이라고 함
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div>
+<canvas id="myChart">
+
+</canvas>
+
+</div>
+<!--
+new chart()는 
+ctx,{} 
+
+{} 안에는 type ,data (labels,datasets,options)로 구성되어져 있다.
+
+데이터의 개수는 라벨스의 개수와 일치해야한다. 라벨은 x축의 범례가 된다.
+data는 y축의 값이 된다.
+  -->
+<script>
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'bar',//bar,line.pie,scatter가 대표적
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
+      }]
+  
+    },
+
+  });
+</script>
+</body>
+</html>

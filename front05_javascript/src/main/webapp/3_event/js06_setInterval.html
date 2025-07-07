@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+let count = 0;
+onload = () => {
+	setInterval(()=>{
+	 let message =["혜화지점에 새로운 교육장을 오픈했습니다", "여러분의 fullstack 기술 향상을 보장합니다.","실전 능력을 위한 워크샵이 기술 마다 준비되어 있습니다."];
+		//1.h3 영역을 받아온다.
+		let banner = document.querySelector('h3');
+		//2.[]안에 있는 값들을 바꿔 ㄱ면서 출력
+		banner.innerHTML = message[count++];
+		//3.모든 메세지를 다 보여주면 다시 count는 0으로 초기화
+		if(count == message.length) count = 0;
+		
+	},3000);//setInterval 3000을 넣으면 3초 간격으로 계속 실행함
+	
+
+};//onload
+
+</script>
+</head>
+<body>
+<h1>Kosa Banner Advertiser...</h1>
+<h3 style = "color: crimson">================kosa Education Academy ====================</h3>
+
+</body>
+</html>

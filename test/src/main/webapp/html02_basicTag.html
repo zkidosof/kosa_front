@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ScopeTag</title>
+<style type="text/css">
+/* body{
+	width: 800px;
+	height: 600px;
+	border: 1px solid gray;
+} */
+
+/* 
+바디 를 나눠도 되고 div으로 나눠서 넣어도 됨 아이디값을 줄때는 #d을 넣어줘야함 */
+
+ 	#wrap{
+ 	 width: 800px;
+	height: 600px;
+	border: 5px dotted navy;
+	margin: 0 auto; /* 알아서 가운데로 오토 멀틱하게 정렬됨  */
+ 	
+ 	}
+ 	#order{
+ 		float: left; /* float가 옆에서 띄우는것 */
+ 		width: 250px;/* 가운데 길이 주는것  */
+ 		margin-left: 50px;/* 여백주는 것  */
+ 		
+ 	}
+ 	
+ 	#unorder{
+ 		float:right;
+ 		width: 250px;
+ 		margin-right: 70px;
+ 	}
+ 	#header{
+ 		text-align: center;
+ 		color: crimson;
+ 		font-weight: bold;
+ 		font-family: sans-serif;
+ 	}
+ 	
+ 	#order,#unorder{
+ 	margin-top: 50px;
+ 	font-size :17px;
+ 	border: 2px dashed orange; /* border는 경계선을 주는것 */
+ 	padding: 20px; /*안에서 여백을 주는것  */
+ 	border-radius:20px;
+ 	background-color:  rgba(255,99,102,0.2);
+ 	
+ 	}
+</style>
+
+<script type="text/javascript">
+function push() {
+	alert("오늘은 여기까지 작업을 마치겠습니다.");
+	
+}
+</script>
+</head>
+<body>
+<div id="wrap">
+<div id="header">
+	<h1>Layout with Scope Tag</h1>
+	<button onclick ="push()">CLICK ME!!</button>
+	
+</div>
+
+<div id ="order">
+<p>Oder List</p>
+<p>순번을 가지는 목록</p>
+<ol>
+	<li>HTML5</li>
+	<li>CSS3</li>
+	<li>Java script</li>
+</ol>
+</div>
+
+<div id = "unorder"> 
+<p>Oder List</p>
+<p>순번을 가지지않는 목록</p>
+<ul>
+	<li>HTML5</li>
+	<li>CSS3</li>
+	<li>Java script</li>
+</ul>
+</div>
+</div>
+</body>
+</html>

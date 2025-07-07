@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+</style>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+</head>
+<body>
+	<div class='main'>
+		<input type='text' id="id"> <input type='password' id="pwd">
+		<button id="login-btn">LOGIN</button>
+	</div>
+	<script type="text/javascript">
+  const idFrom = document.getElementById("id");
+  const pwdFrom = document.getElementById("pwd");
+  const loginBtn = document.getElementById("login-btn");
+
+  loginBtn.addEventListener('click', () => {
+    // 1. 객체 생성
+    let userInfo = {
+      id: idFrom.value,
+      pwd: pwdFrom.value
+    };
+
+    // 2. 저장 (key는 예: "userInfo", value는 JSON 형태)
+    localStorage.setItem("userInfo", JSON.stringify(userInfo));
+
+    // 3. 확인
+    alert("저장된 ID: " + userInfo.id + "\n저장된 비밀번호: " + userInfo.pwd);
+    
+    //로컬스토리지에 저장된 데이타를 다시 가져올때는 덩어리로
+  const result = JSON.parse(localStorage.getItem("userInfo"));  // 문자열 → 객체로
+console.log("ID =>", result.id);  // 결과 확인
+console.log("PWD =>", result.pwd);
+  });
+  
+ 
+</script>
+</body>
+</html>
