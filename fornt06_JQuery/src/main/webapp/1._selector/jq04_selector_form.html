@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	$(function(){  
+		// 입력폼을 선택자로 지정..폼안에 값을 james로 입력
+		$('input[text=name]').val('james');
+		//result영역에 입력된 고객이름은 james 입니다 . 가 출력되도록 h3크기로 색상은 블루
+/* 		$('#result').html("<h3 style='color:blue;'>입력된 고객이름은"+name+" 입니다.<h3>");
+ */		$('#result').html(`<h3 style='color:blue;'>입력된 고객이름은${name} 입니다.<h3>`);	
+
+	});
+</script>
+</head>
+<body>
+	<form action="jq04_result.jsp" method="get">
+		<input type="text" name="name">
+		<input type="submit">
+	</form>
+	<div id='result'>
+	
+	</div>
+</body>
+</html>
+
+
+

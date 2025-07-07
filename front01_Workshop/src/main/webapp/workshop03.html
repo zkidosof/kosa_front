@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>KOSA CSS</title>
+<style>
+body {
+	background-color: black;
+	color: white;
+	font-family: 'Arial', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.wrap {
+	width: 90%;
+	max-width: 640px;
+	margin: 0 auto;
+	padding: 30px 20px;
+}
+
+header .wrap {
+	font-size: 14px;
+	font-weight: bold;
+	color: #bbb;
+	margin-bottom: 20px;
+}
+
+.cover img {
+	width: 150px;
+	height: auto; /*비율 유지  */
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 20px; 
+	border-radius: 20px;
+}
+
+.playlist-title {
+	font-size: 28px;
+	font-weight: bold;
+	clear: both;
+	
+}
+
+.hot-badge {
+	background-color: #a97627;
+	color: white;
+	font-size: 12px;
+	padding: 3px 8px;
+	border-radius: 8px;
+	margin-left: 10px;
+	vertical-align: middle;
+}
+
+.artist {
+	clear: both; display : flex;
+	align-items: center;
+	margin-top: 20px;
+	font-size: 14px;
+	color: #999;
+	display: flex;
+}
+
+.artist-profile {
+	 width: 30px;
+  height: 30px;
+  margin-right: 10px;
+	margin-right: 10px;
+}
+
+.description {
+	margin-top: 20px;
+	font-size: 13px;
+	line-height: 1.6;
+	color: #aaa;
+}
+
+.play-button {
+	margin-top: 30px;
+	background-color: #7a5de8;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	font-size: 16px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.play-button:hover {
+	background-color: #674cd1;
+}
+
+.footer-bar {
+	height: 4px;
+	background-color: lime;
+	width: 100%;
+	margin-top: 50px;
+}
+#logo {
+
+  width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	margin-right: 10px;
+	vertical-align: middle; 
+}
+
+</style>
+</head>
+<body>
+	<header>
+  <div class="wrap">
+    <span class="header-title">KOSA Music</span>
+    <img src="img/logo.jpg" alt="header-logo" id="logo">
+  </div>
+</header>
+	<main class="wrap">
+		<div class="info">
+			<div class="cover">
+				<img class="cover-image" src="img/cafe.jpg" alt="카페에서 일할 때 커버 이미지">
+			</div>
+			<h1 class="playlist-title">
+				카페에서 일할 때 <span class="hot-badge">인기</span>
+			</h1>
+			<div class="artist">
+				<img src="img/logo (1).png" alt="kosa 프로필" class="artist-profile">
+				Kosa Coffee
+			</div>
+			<div class="description">
+				차분하게 흐르는 따뜻한 음악과 함께하는 휴식.<br> KOSA Music 에디터가 매달 업데이트하는
+				플레이리스트입니다.<br> 마음에 드는 곳이 있다면 보관함에 추가해 보세요.
+			</div>
+			<button class="play-button">지금 듣기</button>
+		</div>
+	</main>
+	<footer class="footer-bar"></footer>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+$(function(){  
+	//1. 버튼 클릭하면 함수 호출...
+	$('#createBtn').on('click',function(){
+		
+		//2. 버튼의 타이틀을 받아와서 div 영역에 출력
+		 let btnText = $(this).val();
+	/* 	 $('#resultViw').html(btnText+"<p>");  */
+		 
+		 //3.html을 써도 uppend랑 같은 결과 나오게
+/* 		 $('#resultViw').html($('#resultViw').html() + "<p>" + btnText + "</p>");
+ */			//append는 자동으로 이어 붙여주지만 html은 덮어쓰기 전에 불러와서 이어붙여야 append처럼 작동
+			let result = $('#resultViw').html(result + title +"<p>");
+	});
+	 //4. select 폼에서 옵션값을 변경 할때 마다 이벤트를 호출
+
+		$('#createSel').on('change', function () {
+  		let selectedVal = $(this).val(); 
+  			$('#resultViw').html($('#resultViw').html()+"<p>" + selectedVal + "</p>");
+			});
+	
+	
+		
+		/* 	setInterval(()=>{
+		$('body').append($('img:eq(0)'));
+		
+	},2000); */
+});
+
+
+</script>
+</head>
+<body>
+<input type='button' value="버튼 클릭시 동적으로 문자열 생성" id = "createBtn">
+<select id="createSel">
+<option>sk 텔레콤 서비스 대학로점</option>
+<option>sk 텔레콤 서비스 구로점</option>
+<option>sk 텔레콤 서비스 삼성로점</option>
+<option>sk 텔레콤 서비스 종로3가점</option>
+
+</select>
+<div id="resultViw"></div>
+</body>
+</html>

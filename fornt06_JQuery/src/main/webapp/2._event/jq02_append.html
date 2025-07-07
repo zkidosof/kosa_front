@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>val()|text(),html()</title>
+<style>
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	$(function(){  
+		//버튼을 클릭하면 함수 호출...
+		$('button').on('click',()=>{
+		let text1 = "<p>This is a Text...</p>";
+		let text2 = $('p').html();
+		let text3 = document.createElement('p');
+		text.innerHTML = 'This is a Text3';
+		//text1,text2,text3를 body 태그에 부착
+		$('body').append(text1,text2,text3);
+			
+		});
+		
+		
+		
+		
+		
+		
+		
+		
+	});
+</script>
+</head>
+<body>
+	<p>This is a paragraph.</p>
+	<button>Append text</button>	
+</body>
+</html>

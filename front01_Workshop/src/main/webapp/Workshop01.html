@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>인사이드 아웃2</title>
+  <style>
+    body {
+      border: 5px solid hotpink;
+      padding: 30px;
+      width: 600px;
+      margin: 0 auto;
+      font-family: sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 30px;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    #www {
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: fit-content;
+    }
+
+    #theater-select, #date-select {
+      display: inline-block;
+      margin-right: 10px;
+      margin-top: 10px;
+    }
+
+    pre {
+      font-size: 16px;
+    }
+
+    #options-box {
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: fit-content;
+      margin-top: 10px;
+      display: none; /* 처음엔 숨김 */
+    }
+  </style>
+
+  <script>
+    function toggleOptions(checkbox) {
+      const box = document.getElementById("options-box");
+      box.style.display = checkbox.checked ? "block" : "none";
+    }
+  </script>
+</head>
+
+<body>
+
+  <h1>★ ★ ★ ★ 인사이드 아웃2 ★ ★ ★ ★</h1>
+
+  <div class="center">
+    <img src="image/inside.jpg" alt="인사이드 아웃 포스터" width="400">
+  </div>
+
+  <form action="#">
+    <div id="theater-select">
+      <label for="theater">상영관</label>
+      <select id="theater" name="theater">
+        <option value="cgv">CGV</option>
+        <option value="lotte">롯데시네마</option>
+        <option value="megabox">메가박스</option>
+        <option value="cineQ">시네큐</option>
+        <option value="emucinema">에무시네마</option>
+      </select>
+    </div>
+
+    <div id="date-select">
+      <label for="date">날짜 선택</label>
+      <input type="date" id="date" name="date">
+    </div>
+
+    <div id="www">
+      <legend>시간선택</legend>
+      <input type="radio" id="time1" name="time" value="08:30" checked>
+      <label for="time1">08:30</label>
+
+      <input type="radio" id="time2" name="time" value="11:00">
+      <label for="time2">11:00</label>
+
+      <input type="radio" id="time3" name="time" value="14:20">
+      <label for="time3">14:20</label>
+
+      <input type="radio" id="time4" name="time" value="17:25">
+      <label for="time4">17:25</label>
+
+      <input type="radio" id="time5" name="time" value="20:10">
+      <label for="time5">20:10</label>
+
+      <input type="radio" id="time6" name="time" value="23:05">
+      <label for="time6">23:05</label>
+    </div>
+
+    <br>
+    <pre>요금   <del>₩9,000</del>   ₩5,000</pre>
+
+    인원: <input type="text" name="count" value="0"><br><br>
+    금액: <input type="text" name="total" value="0"><br><br>
+
+    <label>
+      <input type="checkbox" onclick="toggleOptions(this)"> 옵션
+    </label>
+
+    <div id="options-box">
+      <label><input type="checkbox" name="item" value="popcorn"> 팝콘</label>
+      <label><input type="checkbox" name="item" value="cola"> 콜라</label>
+    </div>
+  </form>
+
+</body>
+</html>

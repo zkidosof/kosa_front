@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>html()| innerHtml, text()| innerText,val | value()을 구분</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+/*$(document).ready{}  */
+$(()=>{ 
+	// 버튼을 클릭하면
+	$('button').click(() => {
+		  // 1. 모든 p, h2 태그 글자색을 파란색으로
+		  $('p, h2').css('color', 'blue');
+
+		  // 2. 첫 번째 p 태그의 내용 변경
+		  $('p:eq(0)').html("<font color=red>첫번째 문장입니다.</font>");
+		  $('p:eq(2)').val("<font color=red>3번째 문장입니다.</font>");
+
+		  // 3. 버튼 숨기기
+		  $('button').css('display', 'none');
+		});
+	
+
+});
+
+</script>
+</head>
+<body>
+	<h2 id="header">	
+		<span>This is a heading</span>
+	</h2>	
+	<p>This is a paragraph.</p>
+	<p class="content">This is another paragraph1.</p>
+	<p class="content theme">This is another paragraph2.</p>	
+	
+	<button>Click me to hide paragraphs</button>
+	<b>이 부분은 bold 하게 출력됩니다.</b>
+</body>
+</html>

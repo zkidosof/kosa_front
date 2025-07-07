@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+$(function(){  
+	$('#eachBtn').on('click',function(){
+		let arr= ["aaa","bbb"];
+/* 		alert(arr.length);*/
+ 		arr.push('ccc');
+ 		arr.push('ddd');
+ 		arr.push('eee');
+	
+ 		let str = "";
+ 		$.each(arr,(index,item)=>{ // jq for문 방식 // index: 인덱스 번호 (0,1,2,...) // item: 각 요소(값)
+ 		 str += item+"";
+ 		});
+ 		alert(str);
+ 		});
+});
+
+</script>
+</head>
+<body>
+<input type="button" value="배열에 each 적용하기" id="eachBtn">
+<
+</body>
+</html>

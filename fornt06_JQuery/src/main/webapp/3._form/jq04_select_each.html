@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>옵션 추가/삭제 예제</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script type="text/javascript">
+    $(function () {
+      // 1. 옵션 생성 버튼 (한 번만 실행)
+      $('#addOptionBtn').on('click', function () {
+        let arr = ["우승환", "강민기", "함동윤", "김선호", "장연정"];
+        $.each(arr, (index, item) => {
+          let option = `<option value="${item}">${item}</option>`;
+          $('#friends').append(option);
+        });
+      });
+
+      // 2. 옵션 삭제 버튼
+      $('#delOptionBtn').click(function () {
+        $('#friends').empty(); // select 태그 안의 모든 <option> 제거
+      });
+    });
+  </script>
+</head>
+<body>
+
+  <h2>동적으로 폼 생성하기</h2>
+
+  <input type="button" value="옵션생성" id="addOptionBtn">
+  <input type="button" value="옵션삭제" id="delOptionBtn">
+
+  <br><br>
+
+  <select id="friends"">
+    <!-- 여기에 option이 동적으로 추가됨 -->
+  </select>
+
+</body>
+</html>
